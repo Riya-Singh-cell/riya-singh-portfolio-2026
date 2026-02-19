@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Riya Singh | AIML Engineer</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Caveat:wght@700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+:root{
+--bg:#fef9e7;
+--card:#ffffff;
+--soft:#faeecd;
+--text:#2c2c2c;
+--muted:#555;
+--accent:#b46f4c;
+--shadow:rgba(0,0,0,0.08);
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:var(--bg);
+color:var(--text);
+line-height:1.6;
+}
+
+/* NAVBAR */
+.navbar{
+display:flex;
+justify-content:center;
+gap:40px;
+padding:16px 0;
+background:#fff;
+border-bottom:1px solid #eee;
+font-weight:500;
+}
+
+.navbar a{
+text-decoration:none;
+color:var(--text);
+transition:0.3s;
+}
+
+.navbar a:hover{
+color:var(--accent);
+}
+
+/* CONTAINER */
+.container{
+max-width:1200px;
+margin:auto;
+padding:3rem 1.5rem;
+}
+
+/* HEADER */
+.top{
+text-align:center;
+margin-bottom:4rem;
+}
+
+.name{
+font-family:'Caveat',cursive;
+font-size:4rem;
+color:var(--accent);
+}
+
+.role{
+font-size:1.2rem;
+color:var(--muted);
+margin-top:0.6rem;
+}
+
+/* CONTACT STRIP */
+.contact-strip{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+margin-top:1.5rem;
+padding:14px 20px;
+background:#e9dcc4;
+font-size:0.95rem;
+font-weight:500;
+}
+
+.contact-strip a,
+.contact-strip div{
+display:flex;
+align-items:center;
+gap:8px;
+color:var(--text);
+text-decoration:none;
+transition:0.3s;
+}
+
+.contact-strip i{
+color:var(--accent);
+}
+
+.contact-strip a:hover{
+color:var(--accent);
+}
+
+/* Resume Button */
+.resume-btn{
+margin-top:2rem;
+}
+
+.resume-btn a{
+display:inline-block;
+padding:12px 28px;
+background:var(--accent);
+color:#fff;
+text-decoration:none;
+font-size:0.95rem;
+font-weight:500;
+transition:0.3s;
+}
+
+.resume-btn a:hover{
+background:#9e5c3d;
+transform:translateY(-3px);
+}
+
+/* ABOUT SECTION */
+.about-section{
+display:flex;
+align-items:center;
+gap:50px;
+margin-bottom:5rem;
+}
+
+.profile-photo img{
+width:300px;
+height:360px;
+object-fit:cover;
+border:6px solid var(--accent);
+}
+
+.about-text{
+background:var(--card);
+padding:2.5rem;
+box-shadow:0 10px 25px var(--shadow);
+}
+
+/* SECTION TITLE */
+.section{
+max-width:1200px;
+margin:5rem auto;
+padding:0 1.5rem;
+}
+
+.section h2{
+font-size:2rem;
+margin-bottom:2rem;
+color:var(--accent);
+text-align:center;
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:2rem;
+}
+
+.card{
+background:var(--card);
+padding:2rem;
+box-shadow:0 10px 25px var(--shadow);
+transition:0.3s;
+cursor:pointer;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.tags span{
+display:inline-block;
+background:var(--soft);
+padding:6px 12px;
+margin:4px;
+font-size:0.75rem;
+}
+
+/* EXPERIENCE */
+.exp-box{
+background:var(--card);
+padding:2rem;
+box-shadow:0 10px 25px var(--shadow);
+margin-bottom:2rem;
+}
+
+/* ACHIEVEMENTS */
+.achieve{
+background:var(--card);
+padding:2rem;
+box-shadow:0 10px 25px var(--shadow);
+}
+
+/* SKILLS */
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:14px;
+justify-content:center;
+margin-top:2rem;
+}
+
+.skills span{
+background:var(--card);
+padding:10px 18px;
+box-shadow:0 5px 15px var(--shadow);
+font-size:0.9rem;
+cursor:pointer;
+transition:0.3s;
+}
+
+.skills span:hover{
+background:var(--accent);
+color:#fff;
+transform:translateY(-5px);
+}
+
+/* FOOTER */
+.footer{
+text-align:center;
+margin:6rem 0 3rem 0;
+color:var(--muted);
+font-size:0.9rem;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+.about-section{
+flex-direction:column;
+text-align:center;
+}
+.profile-photo img{
+width:240px;
+height:300px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Experience</a>
+<a href="#">Projects</a>
+<a href="#">Achievements</a>
+<a href="#">Skills</a>
+</div>
+
+<div class="container">
+
+<div class="top">
+<div class="name">Riya Singh</div>
+<div class="role">Artificial Intelligence & Machine Learning Engineer</div>
+
+<div class="contact-strip">
+<a href="mailto:riya160305@gmail.com"><i class="fas fa-envelope"></i> riya160305@gmail.com</a>
+<div><i class="fas fa-phone"></i> +91 7796220083</div>
+<div><i class="fas fa-map-marker-alt"></i> SRM University AP</div>
+<a href="https://github.com/Riya-Singh-cell" target="_blank"><i class="fab fa-github"></i> Riya-Singh-cell</a>
+<a href="https://linkedin.com/in/riya-singh-77a658295" target="_blank"><i class="fab fa-linkedin"></i> riya-singh-77a658295</a>
+</div>
+
+<div class="resume-btn">
+<a href="RiyaSingh_Resume.pdf" download>
+<i class="fas fa-download"></i> Download Resume
+</a>
+</div>
+</div>
+
+<div class="about-section">
+<div class="profile-photo">
+<img src="Riya_profile.jpeg" alt="Riya Singh">
+</div>
+
+<div class="about-text">
+<h2>About Me</h2>
+<p>Computer Science undergraduate specializing in Artificial Intelligence and Machine Learning at SRM University AP.</p>
+<p>I design and deploy intelligent systems across NLP, Computer Vision, and predictive analytics including Retrieval-Augmented Generation (RAG), semantic search, deep learning pipelines, and scalable AI APIs.</p>
+<p>Focused on building research-driven, production-ready AI systems that solve meaningful real-world problems.</p>
+</div>
+</div>
+
+</div>
+
+<!-- EXPERIENCE -->
+<div class="section">
+<h2>Experience</h2>
+
+<div class="exp-box">
+<h3>AI/ML Intern - Labmentix</h3>
+<small>Jun 2025 - Sep 2025 · Remote</small>
+<p>Worked on real-world AI/ML projects focusing on data preprocessing, supervised learning model development, and performance evaluation.</p>
+</div>
+
+<div class="exp-box">
+<h3>Webmaster - SRM University AP ACM Student Chapter</h3>
+<p><b>Aug 2025 - Present</b></p>
+<p>Supporting event planning, managing web infrastructure, and technical coordination.</p>
+</div>
+
+<div class="exp-box">
+<h3>Associate - Next Tech Lab, AP</h3>
+<p><b>Apr 2025 - Jan 2026</b></p>
+<p>Worked on Python-based ML systems and collaborative AI development.</p>
+</div>
+</div>
+
+<!-- PROJECTS -->
+<div class="section">
+<h2>Projects</h2>
+<div class="grid">
+
+<div class="card" onclick="window.open('https://github.com/Riya-Singh-cell/medical-rag','_blank')">
+<h3>Medical Report RAG</h3>
+<div class="tags"><span>Python</span><span>FAISS</span><span>Transformers</span></div>
+<p>Hybrid retrieval system for analyzing medical reports.</p>
+</div>
+
+<div class="card" onclick="window.open('https://github.com/Riya-Singh-cell/skill-match-ai-02','_blank')">
+<h3>AI Resume Matcher</h3>
+<div class="tags"><span>React</span><span>NLP</span><span>FastAPI</span></div>
+<p>Semantic resume-to-job matching engine.</p>
+</div>
+
+<div class="card" onclick="window.open('https://github.com/Riya-Singh-cell/sentiment-insight','_blank')">
+<h3>Sentiment Analysis</h3>
+<div class="tags"><span>Python</span><span>Text Classification</span></div>
+<p>Supervised NLP sentiment detection model.</p>
+</div>
+
+<div class="card" onclick="window.open('https://github.com/Riya-Singh-cell/mindease-self-check-in','_blank')">
+<h3>MindEase</h3>
+<div class="tags"><span>ML</span><span>Flask</span></div>
+<p>Mental health predictive assessment system.</p>
+</div>
+
+</div>
+</div>
+
+<!-- UPCOMING -->
+<div class="section">
+<h2>Upcoming Projects</h2>
+<div class="grid">
+<div class="card"><h3>Face-ReID Platform</h3><p>Deep metric learning system for face re-identification.</p></div>
+<div class="card"><h3>Stock Predictions AI</h3><p>LSTM-based stock forecasting system.</p></div>
+<div class="card"><h3>PrepGenie</h3><p>AI-powered study assistant using RAG.</p></div>
+</div>
+</div>
+
+<!-- ACHIEVEMENTS -->
+<div class="section">
+<h2>Achievements & Community</h2>
+<div class="achieve">
+🏆 2nd Prize - Code for Connection Hackathon (SRM AP Coding Club)<br><br>
+💡 Active Contributor - ACM Student Chapter<br><br>
+🤝 Community Involvement - Technical event coordination & peer collaboration
+</div>
+</div>
+
+<!-- SKILLS -->
+<div class="section">
+<h2>Technical Skills</h2>
+<div class="skills">
+<span>Python</span><span>Java</span><span>JavaScript</span>
+<span>Supervised Learning</span><span>Unsupervised Learning</span>
+<span>Model Evaluation</span><span>Feature Engineering</span><span>scikit-learn</span>
+<span>CNNs</span><span>Neural Networks</span><span>TensorFlow</span><span>Keras</span>
+<span>Embeddings</span><span>Semantic Search</span><span>RAG</span>
+<span>Text Preprocessing</span><span>Prompt Engineering</span>
+<span>FAISS</span><span>FastAPI</span><span>Flask</span>
+<span>React (Vite)</span><span>HTML</span><span>CSS</span>
+<span>SQL</span><span>DBMS</span><span>Advanced DBMS</span>
+<span>Operating Systems</span><span>Computer Networks</span>
+<span>Git</span><span>GitHub</span>
+</div>
+</div>
+
+<div class="footer">
+© 2026 Riya Singh 
+</div>
+
+</body>
+</html>
