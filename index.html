@@ -28,34 +28,18 @@ color:var(--text);
 line-height:1.6;
 }
 
-/* NAVBAR */
-.navbar{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:25px;
-padding:14px 10px;
-background:#fff;
-border-bottom:1px solid #eee;
-font-weight:500;
-}
-
-.navbar a{
-text-decoration:none;
-color:var(--text);
-font-size:0.95rem;
-transition:0.3s;
-}
-
-.navbar a:hover{
-color:var(--accent);
-}
-
 /* CONTAINER */
 .container{
 max-width:1200px;
 margin:auto;
 padding:2.5rem 1rem;
+}
+
+/* larger screens */
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1400px;
+  }
 }
 
 /* HEADER */
@@ -65,84 +49,136 @@ margin-bottom:3rem;
 }
 
 .name{
-font-family:'Caveat',cursive;
-font-size:3.5rem;
+font-size:clamp(2.5rem, 8vw, 4rem);
 color:var(--accent);
+line-height:1.2;
 }
 
 .role{
-font-size:1.05rem;
+font-size:clamp(0.9rem, 3vw, 1.1rem);
 color:var(--muted);
 margin-top:0.5rem;
 }
 
-/* CONTACT STRIP */
+/* CONTACT STRIP - improved */
 .contact-strip{
 display:flex;
 justify-content:center;
 flex-wrap:wrap;
-gap:18px;
+gap:1.5rem 2rem;
 margin-top:1.5rem;
-padding:12px 15px;
+padding:1rem 1.5rem;
 background:#e9dcc4;
-font-size:0.85rem;
+border-radius: 60px; /* soft pill shape for the strip */
+font-size:0.9rem;
 }
 
 .contact-strip a,
 .contact-strip div{
 display:flex;
 align-items:center;
-gap:6px;
+gap:8px;
 color:var(--text);
 text-decoration:none;
+white-space:nowrap; /* prevent wrapping inside each item */
 }
 
 .contact-strip i{
 color:var(--accent);
+width:1.2rem;
+text-align:center;
 }
 
 .contact-strip a:hover{
 color:var(--accent);
 }
 
-/* Resume Button */
+/* mobile: allow wrap inside items if needed */
+@media (max-width: 480px) {
+  .contact-strip {
+    flex-direction: column;
+    align-items: center;
+    gap:0.75rem;
+    border-radius: 30px;
+  }
+  .contact-strip a,
+  .contact-strip div {
+    white-space: normal;
+    justify-content: center;
+  }
+}
+
+/* Resume Button - fully rounded */
 .resume-btn{
-margin-top:1.5rem;
+margin-top:2rem;
 }
 
 .resume-btn a{
 display:inline-block;
-padding:10px 22px;
+padding:0.8rem 2.2rem;
 background:var(--accent);
 color:#fff;
 text-decoration:none;
-font-size:0.85rem;
+font-size:1rem;
+border-radius: 40px;  /* pill shape */
 transition:0.3s;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 
 .resume-btn a:hover{
 background:#9e5c3d;
+transform:translateY(-2px);
+box-shadow:0 8px 18px rgba(0,0,0,0.15);
 }
 
-/* ABOUT SECTION */
+/* ========== ABOUT SECTION (UPDATED: equal height, image fills) ========== */
 .about-section{
-display:flex;
-align-items:center;
-gap:40px;
-margin-bottom:4rem;
+display: grid;
+grid-template-columns: 260px 1fr;  /* fixed width for image, text takes rest */
+gap: 40px;
+margin-bottom: 4rem;
+align-items: stretch; /* ensures both columns stretch to same height */
+}
+
+.profile-photo {
+/* no extra styling — width controlled by grid column */
 }
 
 .profile-photo img{
-width:260px;
-height:320px;
-object-fit:cover;
-border:5px solid var(--accent);
+width: 100%;
+height: 100%;          /* fill the grid column height */
+object-fit: cover;     /* crop to fill without distortion */
+border: 5px solid var(--accent);
+border-radius: 10px;
+display: block;
+box-sizing: border-box; /* include border in 100% height/width */
 }
 
 .about-text{
 background:var(--card);
 padding:2rem;
 box-shadow:0 8px 20px var(--shadow);
+border-radius: 10px;
+/* will automatically fill height due to stretch */
+}
+
+/* mobile about section: switch to column layout with auto height */
+@media (max-width: 768px){
+  .about-section{
+    grid-template-columns: 1fr;   /* single column */
+    gap: 25px;
+    text-align: center;
+  }
+  .profile-photo img{
+    width: min(220px, 100%);
+    height: auto;           /* back to automatic height */
+    aspect-ratio: 4/5;      /* maintain original shape */
+    object-fit: cover;
+    margin: 0 auto;
+  }
+  .about-text{
+    padding:1.5rem;
+  }
 }
 
 /* SECTION TITLE */
@@ -153,7 +189,7 @@ padding:0 1rem;
 }
 
 .section h2{
-font-size:1.8rem;
+font-size:clamp(1.5rem, 5vw, 2rem);
 margin-bottom:1.5rem;
 color:var(--accent);
 text-align:center;
@@ -172,18 +208,29 @@ padding:1.5rem;
 box-shadow:0 8px 20px var(--shadow);
 transition:0.3s;
 cursor:pointer;
+border-radius: 10px;
+height:100%;
+display:flex;
+flex-direction:column;
 }
 
 .card:hover{
 transform:translateY(-6px);
 }
 
+.tags{
+margin:1rem 0;
+display:flex;
+flex-wrap:wrap;
+gap:0.4rem;
+}
+
 .tags span{
 display:inline-block;
 background:var(--soft);
 padding:5px 10px;
-margin:4px;
 font-size:0.7rem;
+border-radius: 20px;
 }
 
 /* EXPERIENCE */
@@ -192,6 +239,11 @@ background:var(--card);
 padding:1.5rem;
 box-shadow:0 8px 20px var(--shadow);
 margin-bottom:1.5rem;
+border-radius: 10px;
+}
+
+.exp-box h3{
+margin-bottom:0.3rem;
 }
 
 /* ACHIEVEMENTS */
@@ -199,6 +251,8 @@ margin-bottom:1.5rem;
 background:var(--card);
 padding:1.5rem;
 box-shadow:0 8px 20px var(--shadow);
+border-radius: 10px;
+line-height:2;
 }
 
 /* SKILLS */
@@ -214,8 +268,9 @@ margin-top:1.5rem;
 background:var(--card);
 padding:8px 14px;
 box-shadow:0 4px 12px var(--shadow);
-font-size:0.8rem;
-cursor:pointer;
+border-radius: 30px;
+font-size:0.85rem;
+cursor:default;
 transition:0.3s;
 }
 
@@ -233,70 +288,59 @@ color:var(--muted);
 font-size:0.8rem;
 }
 
-/* ===== MOBILE RESPONSIVE ===== */
-@media(max-width:768px){
-
-.name{
-font-size:2.6rem;
+/* small phone & watch */
+@media (max-width: 380px) {
+  .name {
+    font-size:2.2rem;
+  }
+  .contact-strip {
+    padding:0.8rem;
+    gap:0.6rem;
+  }
+  .resume-btn a {
+    padding:0.6rem 1.5rem;
+    font-size:0.9rem;
+  }
+  .profile-photo img {
+    width:180px;
+  }
+  .grid {
+    grid-template-columns:1fr;
+  }
+  .skills span {
+    font-size:0.75rem;
+    padding:5px 10px;
+  }
 }
 
-.role{
-font-size:0.95rem;
+/* tablet landscape */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .about-section {
+    gap:30px;
+  }
+  .about-text {
+    padding:1.8rem;
+  }
 }
 
-.about-section{
-flex-direction:column;
-text-align:center;
-gap:25px;
-}
-
-.profile-photo img{
-width:200px;
-height:250px;
-}
-
-.about-text{
-padding:1.5rem;
-}
-
-.navbar{
-gap:15px;
-font-size:0.85rem;
-}
-
-.section h2{
-font-size:1.5rem;
-}
-
-.card{
-padding:1.2rem;
-}
-
-.exp-box,
-.achieve{
-padding:1.2rem;
-}
-
-.skills span{
-font-size:0.75rem;
-padding:7px 12px;
-}
-
+/* large TV */
+@media (min-width: 2000px) {
+  .container {
+    max-width: 1600px;
+  }
+  body {
+    font-size:1.2rem;
+  }
+  .card {
+    padding:2rem;
+  }
 }
 </style>
 
 </head>
-
 <body>
 
-<div class="navbar">
-<a href="#">Home</a>
-<a href="#">About</a>
-<a href="#">Experience</a>
-<a href="#">Projects</a>
-<a href="#">Achievements</a>
-<a href="#">Skills</a>
-</div>
+<!-- empty navbar removed -->
 
 <div class="container">
 
@@ -326,10 +370,11 @@ padding:7px 12px;
 
 <div class="about-text">
 <h2>About Me</h2>
-<p>Computer Science undergraduate specializing in Artificial Intelligence and Machine Learning at SRM University AP.</p>
-<p>I design and deploy intelligent systems across NLP, Computer Vision, and predictive analytics including Retrieval-Augmented Generation (RAG), semantic search, deep learning pipelines, and scalable AI APIs.</p>
-<p>Focused on building research-driven, production-ready AI systems that solve meaningful real-world problems.</p>
-</div>
+<p>Computer Science undergraduate specializing in Artificial Intelligence and Machine Learning at SRM University AP. I am deeply interested in building intelligent systems that solve real-world problems through data-driven approaches.</p>
+
+<p>My work and learning focus on core areas such as Natural Language Processing, Computer Vision, and predictive analytics. I have explored concepts like Retrieval-Augmented Generation (RAG), semantic search, supervised learning models, and deep learning architectures, while continuously strengthening my fundamentals in machine learning and neural networks.</p>
+
+<p>I am particularly motivated by research-driven problem solving and collaborative learning environments where ideas are discussed deeply and solutions are built thoughtfully. My goal is to grow into a technically strong AI engineer by consistently improving my understanding and contributing to meaningful AI projects.</p>
 </div>
 
 </div>
