@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medical Report RAG</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+font-family:'Inter',sans-serif;
+background:#fef9e7;
+color:#2c2c2c;
+padding:2rem;
+max-width:900px;
+margin:auto;
+line-height:1.7;
+}
+
+h1{color:#b46f4c;}
+h2{margin-top:1.8rem;}
+
+.tag{
+display:inline-block;
+background:#faeecd;
+padding:6px 10px;
+border-radius:20px;
+margin:4px;
+font-size:0.8rem;
+}
+
+.btn{
+display:inline-block;
+margin-top:2rem;
+padding:10px 18px;
+background:#b46f4c;
+color:white;
+text-decoration:none;
+border-radius:30px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Medical Report Analyzer – RAG System</h1>
+
+<h2>Problem Statement</h2>
+<p>
+Medical reports are often complex and difficult for non-medical individuals to understand. Patients struggle to interpret terminology, values, and implications, leading to confusion and poor decision-making.
+</p>
+
+<h2>Solution</h2>
+<p>
+This project uses a Retrieval-Augmented Generation (RAG) approach to analyze medical reports. It retrieves relevant medical context using vector search (FAISS) and combines it with transformer-based models to generate clear, contextual explanations for users.
+</p>
+
+<h2>Key Features</h2>
+<ul>
+<li>🔍 Semantic search using embeddings</li>
+<li>📄 Document retrieval with FAISS</li>
+<li>🧠 Context-aware response generation</li>
+<li>⚡ Efficient processing of large medical texts</li>
+</ul>
+
+<h2>Tech Stack</h2>
+<span class="tag">Python</span>
+<span class="tag">FAISS</span>
+<span class="tag">Transformers</span>
+<span class="tag">RAG</span>
+<span class="tag">NLP</span>
+
+<h2>Challenges Faced</h2>
+<p>
+Ensuring accurate retrieval of relevant context from large datasets was challenging. Fine-tuning embedding quality and maintaining response relevance without hallucination required careful balancing of retrieval and generation components.
+</p>
+
+<h2>Future Improvements</h2>
+<ul>
+<li>Integration with real medical datasets</li>
+<li>Improved accuracy using domain-specific models</li>
+<li>User-friendly web interface for report upload</li>
+<li>Explainable AI for better trust and transparency</li>
+</ul>
+
+<a href="https://github.com/Riya-Singh-cell/medical-rag" target="_blank" class="btn">
+View on GitHub
+</a>
+
+</body>
+</html>
