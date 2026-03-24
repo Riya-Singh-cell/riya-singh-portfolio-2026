@@ -184,15 +184,16 @@ border-radius: 10px;
 /* SECTION TITLE */
 .section{
 max-width:1200px;
-margin:4rem auto;
-padding:0 1rem;
+margin:5rem auto;   /* increased spacing */
+padding:0 1.5rem;   /* more left-right breathing */
 }
 
 .section h2{
-font-size:clamp(1.5rem, 5vw, 2rem);
-margin-bottom:1.5rem;
+font-size:clamp(1.6rem, 5vw, 2.2rem);  /* slightly bigger */
+margin-bottom:2rem;   /* more gap below title */
 color:var(--accent);
 text-align:center;
+letter-spacing:0.5px; /* cleaner look */
 }
 
 /* GRID */
@@ -346,7 +347,7 @@ font-size:0.8rem;
 
 <div class="top">
 <div class="name">Riya Singh</div>
-<div class="role">AI/ML Engineer • Generative AI • Agentic AI Systems</div>
+<div class="role">AI/ML Engineer • Agentic AI Systems • Data Analytics</div>
 
 <div class="contact-strip">
 <a href="mailto:riya160305@gmail.com"><i class="fas fa-envelope"></i> riya160305@gmail.com</a>
@@ -376,15 +377,15 @@ font-size:0.8rem;
 <h2>About Me</h2>
 
 <p>
-Computer Science undergraduate specializing in <b>Artificial Intelligence, Machine Learning, and Generative AI</b> at SRM University AP. I focus on building intelligent, adaptive systems that solve real-world problems using data-driven and AI-powered approaches.
+Computer Science undergraduate specializing in <b>Artificial Intelligence, Machine Learning, and Generative AI</b> at SRM University AP. I focus on building intelligent, adaptive systems that solve real-world problems using both <b>AI-driven and data-driven approaches</b>.
 </p>
 
 <p>
-My work spans <b>NLP, Agentic AI systems, and full-stack AI applications</b>, including projects involving Retrieval-Augmented Generation (RAG), semantic search, and LLM-powered applications. I enjoy designing systems that not only predict but also <b>reason, adapt, and assist users intelligently</b>.
+My work spans <b>NLP, Agentic AI systems, and full-stack AI applications</b>, including projects involving Retrieval-Augmented Generation (RAG), semantic search, and LLM-powered solutions. Alongside AI development, I also enjoy <b>analyzing data, building dashboards, and extracting meaningful insights</b> to support decision-making.
 </p>
 
 <p>
-I am particularly interested in <b>scalable AI system design, real-world deployment, and building impactful products</b>. My goal is to grow into a strong AI engineer by combining deep technical knowledge with practical problem-solving and meaningful project development.
+I am particularly interested in <b>scalable AI system design, data analytics, and real-world deployment</b>. I enjoy working at the intersection of AI and data - where systems not only predict and automate but also <b>provide clear, actionable insights</b>. My goal is to grow into a strong AI engineer while developing solid expertise in data analytics and impactful product development.
 </p>
 
 </div>
@@ -415,40 +416,75 @@ I am particularly interested in <b>scalable AI system design, real-world deploym
 </div>
 <!-- PROJECTS -->
 <div class="section">
-<h2>Projects</h2>
+
+<h2 style="margin-bottom: 3rem;">Projects</h2>
+
+<!-- AIML -->
+<div class="project-group" style="margin-top: 1.5rem;">
+<h3 style="margin-bottom: 1.5rem;">AIML Projects</h3>
+
 <div class="grid">
 
 <div class="card" onclick="window.open('safenest.html','_blank')">
 <h3>SafeNest – Women Safety Web App</h3>
-<p>Click to know more →</p>
+<p>AI-powered safety system with alerts & tracking</p>
+<p style="margin-top:10px;">Click to know more →</p>
 </div>
 
 <div class="card" onclick="window.open('prepgenie.html','_blank')">
 <h3>PrepGenie – AI Study Assistant</h3>
-<p>Click to know more →</p>
+<p>LLM-based learning assistant with smart planning</p>
+<p style="margin-top:10px;">Click to know more →</p>
 </div>
 
 <div class="card" onclick="window.open('medical-rag.html','_blank')">
 <h3>Medical Report RAG</h3>
-<p>Click to know more →</p>
+<p>RAG system for intelligent medical insights</p>
+<p style="margin-top:10px;">Click to know more →</p>
 </div>
 
 <div class="card" onclick="window.open('resume-matcher.html','_blank')">
 <h3>AI Resume Matcher</h3>
-<p>Click to know more →</p>
+<p>NLP-based resume-job matching system</p>
+<p style="margin-top:10px;">Click to know more →</p>
 </div>
 
 <div class="card" onclick="window.open('sentiment.html','_blank')">
 <h3>Sentiment Analysis</h3>
-<p>Click to know more →</p>
+<p>Text classification using NLP techniques</p>
+<p style="margin-top:10px;">Click to know more →</p>
 </div>
 
 <div class="card" onclick="window.open('mindease.html','_blank')">
 <h3>MindEase</h3>
-<p>Click to know more →</p>
+<p>AI-based mental wellness assistant</p>
+<p style="margin-top:10px;">Click to know more →</p>
 </div>
 
 </div>
+</div>
+
+<!-- DATA ANALYTICS -->
+<div class="project-group analytics" style="margin-top: 3rem;">
+<h3 style="margin-bottom: 1.5rem;">Data Analytics Projects</h3>
+
+<div class="grid">
+
+<div class="card highlight" onclick="window.open('sales-dashboard.html','_blank')">
+<h3>Sales Performance Dashboard</h3>
+<p>Power BI • KPI Tracking • Business Insights</p>
+<p style="margin-top:10px;">Click to know more →</p>
+</div>
+
+<div class="card highlight" onclick="window.open('healthcare-dashboard.html','_blank')">
+<h3>Healthcare Analytics Dashboard</h3>
+<p>Python • Streamlit • Data Visualization</p>
+<p style="margin-top:10px;">Click to know more →</p>
+</div>
+
+</div>
+</div>
+
 </div>
 
 <!-- UPCOMING -->
@@ -484,18 +520,34 @@ I am particularly interested in <b>scalable AI system design, real-world deploym
 <!-- SKILLS -->
 <div class="section">
 <h2>Technical Skills</h2>
+
 <div class="skills">
-<span>Python</span><span>Java</span><span>JavaScript</span>
-<span>Supervised Learning</span><span>Unsupervised Learning</span>
-<span>Model Evaluation</span><span>Feature Engineering</span><span>scikit-learn</span>
-<span>CNNs</span><span>Neural Networks</span><span>TensorFlow</span><span>Keras</span>
-<span>Embeddings</span><span>Semantic Search</span><span>RAG</span><span>Agentic AI</span>
-<span>Prompt Engineering</span><span>LangChain</span><span>LLMs</span>
-<span>FAISS</span><span>FastAPI</span><span>Flask</span><span>Streamlit</span>
-<span>React (Vite)</span><span>HTML</span><span>CSS</span>
-<span>SQL</span><span>DBMS</span><span>Advanced DBMS</span>
-<span>Operating Systems</span><span>Computer Networks</span>
+
+<!-- Data Analytics -->
+<span>Python</span><span>SQL</span><span>Excel</span>
+<span>Data Analysis</span><span>Data Cleaning</span><span>EDA</span>
+<span>Data Visualization</span><span>Power BI</span><span>Tableau</span>
+<span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>Seaborn</span><span>Plotly</span>
+
+<!-- AIML -->
+<span>Machine Learning</span><span>Supervised Learning</span><span>Model Evaluation</span>
+<span>Feature Engineering</span><span>Scikit-learn</span>
+<span>Neural Networks</span><span>CNNs</span><span>TensorFlow</span><span>Keras</span>
+
+<!-- NLP / GenAI -->
+<span>LLMs</span><span>RAG</span><span>Embeddings</span>
+<span>Semantic Search</span><span>Prompt Engineering</span><span>LangChain</span>
+
+<!-- Development -->
+<span>Streamlit</span><span>FastAPI</span><span>Flask</span>
+<span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span>
+
+<!-- Core CS -->
+<span>ADBMS</span><span>Operating Systems</span><span>Computer Networks</span>
+
+<!-- Tools -->
 <span>Git</span><span>GitHub</span>
+
 </div>
 </div>
 
