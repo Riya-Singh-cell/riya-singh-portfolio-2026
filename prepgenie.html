@@ -52,17 +52,22 @@ Students often struggle to manage multiple academic tasks such as generating not
 
 <h2>Solution</h2>
 <p>
-PrepGenie is an AI-powered study assistant that integrates multiple learning tools into one platform. It helps students generate notes, create mock tests, and build personalized study plans using intelligent AI systems.
+PrepGenie is an AI-powered full-stack study assistant that integrates AI-based note generation with cloud storage. It enables users to generate structured notes using LLMs and download them anytime through a scalable backend system.
 </p>
 
 <h2>Key Features</h2>
 <ul>
-<li>📚 AI-generated notes with explanations</li>
-<li>📝 Customizable mock test generation</li>
-<li>📅 Personalized study planner</li>
-<li>⚡ Real-time AI responses using LLMs</li>
-<li>🎯 All-in-one learning assistant platform</li>
+<li>📚 AI-generated study notes</li>
+<li>☁️ Cloud storage using AWS S3</li>
+<li>⬇️ Downloadable notes (Text File)</li>
+<li>⚡ Real-time API interaction (FastAPI)</li>
+<li>🎯 Scalable full-stack architecture</li>
 </ul>
+
+<h2>System Architecture</h2>
+<p>
+Frontend (React) → FastAPI Backend → Groq LLM → File Generation → AWS S3 → Public URL → Download
+</p>
 
 <h2>Tech Stack</h2>
 <span class="tag">React</span>
@@ -70,26 +75,28 @@ PrepGenie is an AI-powered study assistant that integrates multiple learning too
 <span class="tag">Python</span>
 <span class="tag">FastAPI</span>
 <span class="tag">Groq API</span>
-<span class="tag">LLMs</span>
+<span class="tag">AWS S3</span>
+<span class="tag">boto3</span>
+
+<h2>Key Implementation</h2>
+<p>
+Built a REST API pipeline to generate notes using LLMs and store them in AWS S3. Implemented cloud storage with unique file naming and public URL generation, enabling persistent and scalable access to generated study material.
+</p>
 
 <h2>Challenges Faced</h2>
 <p>
-Integrating multiple AI features (notes, tests, planner) into a single seamless workflow required careful system design. Managing prompt engineering for different tasks and ensuring consistent output quality across features was a major challenge.
+Integrating frontend, backend, AI, and cloud into a single workflow required careful system design. Handling CORS issues, managing dependencies, and configuring AWS S3 permissions were key challenges.
 </p>
 
 <h2>Future Improvements</h2>
 <ul>
-<li>User authentication and progress tracking</li>
-<li>Adaptive learning based on performance</li>
-<li>Analytics dashboard for study insights</li>
+<li>Secure downloads using pre-signed URLs</li>
+<li>User authentication system</li>
+<li>Dashboard for saved notes</li>
 <li>Mobile app version</li>
 </ul>
 
-<a href="https://prepwithgenie.vercel.app/" target="_blank" class="btn">
-Live Demo
-</a>
-
-<a href="https://github.com/Riya-Singh-cell/prepgenie" target="_blank" class="btn">
+<a href="https://github.com/Riya-Singh-cell/prepwithgenie" target="_blank" class="btn">
 View on GitHub
 </a>
 

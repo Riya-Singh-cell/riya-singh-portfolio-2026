@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Medical Report RAG</title>
+<title>Medical Report Analyzer – RAG System</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
@@ -54,7 +54,7 @@ Medical reports are often complex and difficult for non-medical individuals to u
 
 <h2>Solution</h2>
 <p>
-This project uses a Retrieval-Augmented Generation (RAG) approach to analyze medical reports. It retrieves relevant medical context using vector search (FAISS) and combines it with transformer-based models to generate clear, contextual explanations for users.
+This project uses a Retrieval-Augmented Generation (RAG) approach to analyze medical reports. It retrieves relevant medical context using vector search (FAISS) and combines it with NLP models to generate clear and contextual explanations.
 </p>
 
 <h2>Key Features</h2>
@@ -62,8 +62,38 @@ This project uses a Retrieval-Augmented Generation (RAG) approach to analyze med
 <li>🔍 Semantic search using embeddings</li>
 <li>📄 Document retrieval with FAISS</li>
 <li>🧠 Context-aware response generation</li>
-<li>⚡ Efficient processing of large medical texts</li>
+<li>⚡ Efficient processing of large medical reports</li>
 </ul>
+
+<h2>Cloud Integration (Simulation)</h2>
+<p>
+The system was treated as a SaaS-based application and simulated using CloudAnalyst to evaluate performance on cloud infrastructure. User workloads and backend processing were mapped to cloud components such as user bases, virtual machines, and data centers.
+</p>
+
+<h2>System Mapping</h2>
+<ul>
+<li>Users uploading reports → User Bases</li>
+<li>Report processing requests → Requests</li>
+<li>RAG backend system → Data Centers</li>
+<li>Processing units → Virtual Machines (VMs)</li>
+</ul>
+
+<h2>Simulation & Optimization</h2>
+<p>
+Simulations were conducted using different load balancing policies. Initially, the Round Robin policy was used, followed by the Throttled policy to optimize system performance and cost.
+</p>
+
+<h2>Key Findings</h2>
+<ul>
+<li>Throttled policy improved response time</li>
+<li>Better resource allocation across VMs</li>
+<li>Reduced operational cost under load</li>
+</ul>
+
+<h2>Concept: Cost-Performance Balance</h2>
+<p>
+The project focuses on achieving an optimal balance between system performance (low response time) and operational cost through efficient resource allocation in cloud environments.
+</p>
 
 <h2>Tech Stack</h2>
 <span class="tag">Python</span>
@@ -71,24 +101,25 @@ This project uses a Retrieval-Augmented Generation (RAG) approach to analyze med
 <span class="tag">Transformers</span>
 <span class="tag">RAG</span>
 <span class="tag">NLP</span>
+<span class="tag">CloudAnalyst</span>
+
+<h2>Key Implementation</h2>
+<p>
+Designed a RAG-based pipeline for document understanding and simulated its behavior as a cloud-based SaaS application using CloudAnalyst. Evaluated system performance under different load balancing strategies to identify optimal configurations.
+</p>
 
 <h2>Challenges Faced</h2>
 <p>
-Ensuring accurate retrieval of relevant context from large datasets was challenging. Fine-tuning embedding quality and maintaining response relevance without hallucination required careful balancing of retrieval and generation components.
+Ensuring accurate retrieval of relevant context from large datasets was challenging. Additionally, mapping the RAG system into a cloud simulation model and analyzing performance metrics required careful abstraction and system understanding.
 </p>
 
 <h2>Future Improvements</h2>
 <ul>
+<li>Real cloud deployment of RAG system</li>
 <li>Integration with real medical datasets</li>
 <li>Improved accuracy using domain-specific models</li>
-<li>User-friendly web interface for report upload</li>
 <li>Explainable AI for better trust and transparency</li>
 </ul>
-
-<!-- BUTTONS -->
-<a href="https://medical-rag-acfiyjrmhjw98gy34fhuzb.streamlit.app/" target="_blank" class="btn">
-Live Demo
-</a>
 
 <a href="https://github.com/Riya-Singh-cell/medical-rag" target="_blank" class="btn">
 View on GitHub
