@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Real-Time Distributed Chat System</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+font-family:'Inter',sans-serif;
+background:#fef9e7;
+color:#2c2c2c;
+padding:2rem;
+max-width:900px;
+margin:auto;
+line-height:1.7;
+}
+h1{color:#b46f4c;}
+h2{margin-top:1.8rem;}
+
+.tag{
+display:inline-block;
+background:#faeecd;
+padding:6px 10px;
+border-radius:20px;
+margin:4px;
+font-size:0.8rem;
+}
+
+.btn{
+display:inline-block;
+margin-top:2rem;
+padding:10px 18px;
+background:#b46f4c;
+color:white;
+text-decoration:none;
+border-radius:30px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Real-Time Distributed Chat System</h1>
+
+<h2>Problem Statement</h2>
+<p>
+Traditional messaging applications require scalable server architectures capable of handling multiple users simultaneously while maintaining low latency and reliable communication. Building such systems involves challenges in networking, concurrency, and message persistence.
+</p>
+
+<h2>Solution</h2>
+<p>
+Developed a distributed real-time chat platform using Java Socket Programming and Multithreading. The system supports concurrent client connections, broadcast messaging, private messaging, online user tracking, and persistent chat storage using MongoDB.
+</p>
+
+<h2>Key Features</h2>
+<ul>
+<li>💬 Real-time messaging system</li>
+<li>👥 Support for 100+ concurrent clients</li>
+<li>🔒 Private messaging between users</li>
+<li>📡 Broadcast communication channels</li>
+<li>🗄️ MongoDB-based persistent chat storage</li>
+<li>⚡ Low-latency message delivery</li>
+</ul>
+
+<h2>System Architecture</h2>
+<p>
+Multiple Clients → TCP/IP Socket Connections → Multithreaded Java Server → Message Processing → MongoDB Storage
+</p>
+
+<h2>Tech Stack</h2>
+
+<span class="tag">Java</span>
+<span class="tag">Socket Programming</span>
+<span class="tag">TCP/IP</span>
+<span class="tag">Multithreading</span>
+<span class="tag">MongoDB</span>
+<span class="tag">Distributed Systems</span>
+
+<h2>Key Implementation</h2>
+<p>
+Implemented a multithreaded server architecture where each connected client is managed through a dedicated ClientHandler thread. Developed broadcast and private messaging functionality, online user discovery, fault-tolerant disconnection handling, and persistent message storage using MongoDB.
+</p>
+
+<h2>Challenges Faced</h2>
+<p>
+Managing concurrent client connections while ensuring thread safety was a major challenge. Handling unexpected disconnections, synchronizing message delivery, and maintaining scalability under high user loads required careful system design and testing.
+</p>
+
+<h2>Future Improvements</h2>
+<ul>
+<li>WebSocket-based web client</li>
+<li>Group chat functionality</li>
+<li>End-to-end encryption</li>
+<li>Docker deployment</li>
+<li>AWS EC2 cloud hosting</li>
+</ul>
+
+<a href="https://github.com/Riya-Singh-cell/RealTimeChatSystem" target="_blank" class="btn">
+View on GitHub
+</a>
+
+</body>
+</html>

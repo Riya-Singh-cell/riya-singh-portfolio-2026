@@ -3,88 +3,142 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Resume Matcher</title>
+<title>TalentSync AI</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
 body{
-font-family:'Inter',sans-serif;
-background:#fef9e7;
-color:#2c2c2c;
-padding:2rem;
-max-width:900px;
-margin:auto;
-line-height:1.7;
+    font-family:'Inter',sans-serif;
+    background:#fef9e7;
+    color:#2c2c2c;
+    padding:2rem;
+    max-width:900px;
+    margin:auto;
+    line-height:1.7;
 }
 
-h1{color:#b46f4c;}
-h2{margin-top:1.8rem;}
+h1{
+    color:#b46f4c;
+}
+
+h2{
+    margin-top:1.8rem;
+    color:#333;
+}
 
 .tag{
-display:inline-block;
-background:#faeecd;
-padding:6px 10px;
-border-radius:20px;
-margin:4px;
-font-size:0.8rem;
+    display:inline-block;
+    background:#faeecd;
+    padding:6px 10px;
+    border-radius:20px;
+    margin:4px;
+    font-size:0.8rem;
 }
 
 .btn{
-display:inline-block;
-margin-top:2rem;
-padding:10px 18px;
-background:#b46f4c;
-color:white;
-text-decoration:none;
-border-radius:30px;
+    display:inline-block;
+    margin-top:2rem;
+    padding:12px 20px;
+    background:#b46f4c;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#94573a;
+}
+
+ul{
+    padding-left:20px;
 }
 </style>
 </head>
 
 <body>
 
-<h1>AI Resume Matcher – NLP-Based Recruitment System</h1>
+<h1>TalentSync AI – AI-Powered Resume Screening Platform</h1>
 
 <h2>Problem Statement</h2>
 <p>
-Recruiters often receive hundreds of resumes for a single job role, making manual screening time-consuming and inefficient. Many qualified candidates are overlooked due to keyword-based filtering systems that fail to capture semantic meaning.
+Recruiters often receive hundreds of resumes for a single job opening. Traditional Applicant Tracking Systems (ATS) rely heavily on keyword matching, causing many qualified candidates to be overlooked simply because their resumes use different wording. Manual screening is time-consuming, inefficient, and difficult to scale.
 </p>
 
 <h2>Solution</h2>
 <p>
-This project uses Natural Language Processing (NLP) to match resumes with job descriptions based on semantic similarity rather than simple keyword matching. The system analyzes both documents, extracts meaningful features, and computes relevance scores to identify the best candidate-job fit.
+TalentSync AI is an intelligent recruitment platform that uses Natural Language Processing (NLP), Sentence Transformers, and semantic similarity matching to compare resumes with job descriptions. Instead of searching for exact keywords, the platform understands the meaning and context behind candidate profiles, helping recruiters identify the most suitable applicants quickly and accurately.
 </p>
 
 <h2>Key Features</h2>
 <ul>
-<li>📄 Resume and job description parsing</li>
-<li>🧠 Semantic similarity scoring using NLP</li>
-<li>📊 Ranking system for candidate matching</li>
-<li>⚡ FastAPI backend for efficient processing</li>
+<li>📄 Resume parsing and information extraction</li>
+<li>🧠 Semantic similarity matching using Sentence Transformers</li>
+<li>⚡ FAISS-powered vector search for fast candidate ranking</li>
+<li>📊 Hybrid scoring based on semantic similarity and skill overlap</li>
+<li>🔐 Secure JWT authentication system</li>
+<li>💾 MongoDB database integration</li>
+<li>🚀 Redis caching for faster performance</li>
+<li>📈 Detailed candidate insights and ranking dashboard</li>
+<li>🎯 Real-time job-resume matching system</li>
 </ul>
 
 <h2>Tech Stack</h2>
+
 <span class="tag">React</span>
 <span class="tag">FastAPI</span>
-<span class="tag">NLP</span>
 <span class="tag">Python</span>
+<span class="tag">MongoDB</span>
+<span class="tag">Redis</span>
+<span class="tag">FAISS</span>
+<span class="tag">Sentence Transformers</span>
+<span class="tag">JWT</span>
+<span class="tag">Tailwind CSS</span>
+<span class="tag">Docker</span>
+
+<h2>How It Works</h2>
+<p>
+The system converts resumes and job descriptions into high-dimensional vector embeddings using the all-MiniLM-L6-v2 Sentence Transformer model. FAISS is used to efficiently search and compare these vectors. Candidate ranking is generated using a hybrid scoring mechanism:
+</p>
+
+<ul>
+<li>70% Semantic Similarity Score</li>
+<li>30% Skill Matching Score</li>
+</ul>
+
+<p>
+This approach ensures more accurate candidate recommendations compared to traditional keyword-based ATS systems.
+</p>
 
 <h2>Challenges Faced</h2>
 <p>
-Capturing semantic meaning beyond keywords was a key challenge. Ensuring accurate similarity scoring and handling different resume formats required careful preprocessing and feature extraction techniques.
+One of the major challenges was implementing semantic matching that understands context rather than exact words. Building an efficient ranking algorithm, handling different resume formats, managing vector embeddings, and optimizing performance using FAISS and Redis caching required significant experimentation and tuning.
 </p>
 
 <h2>Future Improvements</h2>
 <ul>
-<li>Integration with real job portals</li>
-<li>Use of advanced embeddings (BERT, Sentence Transformers)</li>
-<li>UI improvements for recruiter dashboards</li>
-<li>Support for multiple file formats (PDF, DOCX)</li>
+<li>LinkedIn and job portal integration</li>
+<li>BERT and advanced transformer-based matching models</li>
+<li>AI-generated interview recommendations</li>
+<li>Multi-language resume support</li>
+<li>Automated candidate feedback generation</li>
+<li>Recruiter analytics dashboard</li>
 </ul>
 
-<a href="https://github.com/Riya-Singh-cell/skill-match-ai-02" target="_blank" class="btn">
-View on GitHub
+<h2>Project Architecture</h2>
+<ul>
+<li><b>Frontend:</b> React + Tailwind CSS</li>
+<li><b>Backend:</b> FastAPI</li>
+<li><b>Database:</b> MongoDB</li>
+<li><b>Caching:</b> Redis</li>
+<li><b>AI Engine:</b> Sentence Transformers + FAISS</li>
+<li><b>Authentication:</b> JWT</li>
+<li><b>Deployment:</b> Docker</li>
+</ul>
+
+<a href="https://github.com/Riya-Singh-cell/talent-sync" target="_blank" class="btn">
+    View on GitHub
 </a>
 
 </body>
